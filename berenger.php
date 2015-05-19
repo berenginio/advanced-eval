@@ -1,127 +1,130 @@
-<?php
-/**
- * Template Name: Blog Timeline
- * Description: A Page Template Blog. 
- */
+<?php 
+$annonces = array(
+	1 => array( 
+ 		'ID' => 'identifiant',
+ 		'Titre' => 'caravane de roumain ',
+ 		'Body' => 'Vends caravane di roumain pas cher di tout sivouplé madamme',
+ 		'Date' => '26/05/1998',
+		'Image' => 'image',
+		'Nom' => 'vladislav',
+		'Prenom' => 'Neculai',
+		'Email' => 'nicoulesko@hotmail.com',
+		'Numero' => '0626568975',
+		'Adresse' => 'a coté di préhérique nord 69100',
+),
+	2 => array( 
+ 		'ID' => 'identifiant',
+ 		'Titre' => 'compuing careche luxche',
+ 		'Body' => 'compuing careche constrouiche avec biton armiche plombriche bounne état tres pouche roulé 5 allez retourche o portougal',
+ 		'Date' => '05/12/2015',
+		'Image' => 'image',
+		'Nom' => 'Da costa',
+		'Prenom' => 'javier',
+		'Email' => 'dacosta@gmail.com',
+		'Numero' => '0712458965',
+		'Adresse' => '80 rue des palaches 69800',
+),
 
-global $theme_option;
-$textdoimain = 'art23'; 
-$image_thumbnail = get_post_meta(get_the_ID(),'_cmb_image_thumbnail', true);
-$page_sub_title = get_post_meta(get_the_ID(),'_cmb_page_sub_title', true);
+	3 => array( 
+ 		'ID' => 'identifiant',
+ 		'Titre' => 'coumping car mersoudes importé alloumagne ',
+ 		'Body' => 'vonds mersoudes campouing car avec broche kebab pour barbecue carburant salade tomates ogoins',
+ 		'Date' => '12/09/2015',
+		'Image' => 'image',
+		'Nom' => 'kulum',
+		'Prenom' => 'zazam',
+		'Email' => 'zazam@gmail.com',
+		'Numero' => '0652545859',
+		'Adresse' => '215 rue des louves 69100',
+),
+	4 => array( 
+ 		'ID' => 'identifiant',
+ 		'Titre' => 'vent rinoult 64 camping car sans ct',
+ 		'Body' => 'vent rinoult 64 iquipé cassette vhs panoupli cheb mami outilisé soulement pour allez o bled 8000€ firme ',
+ 		'Date' => '23/06/2015',
+		'Image' => 'image',
+		'Nom' => 'abde',
+		'Prenom' => 'moha',
+		'Email' => 'm.69@gmail.com',
+		'Numero' => '0478754869',
+		'Adresse' => '23 mas de la licorne 69100',
+),
+	5 => array( 
+ 		'ID' => 'identifiant',
+ 		'Titre' => 'campwing cawar ',
+ 		'Body' => 'campwing car pas cher paiement par western union ',
+ 		'Date' => '25/02/2006',
+		'Image' => 'image',
+		'Nom' => 'diaby',
+		'Prenom' => 'souleimane',
+		'Email' => 'soul@gmail.com',
+		'Numero' => '002121489857595',
+		'Adresse' => '25 avenue général soeur dakar',
+),
+	6 => array( 
+ 		'ID' => 'identifiant',
+ 		'Titre' => 'Camping car',
+ 		'Body' => 'camping car neuf dans sa boite',
+ 		'Date' => '25/06/2015',
+		'Image' => 'image',
+		'Nom' => 'norman',
+		'Prenom' => 'prennam',
+		'Email' => ',lkdfd@gmail.com',
+		'Numero' => '0622515859',
+		'Adresse' => '58 route de vienne',
+),
+	7 => array( 
+ 		'ID' => 'identifiant',
+ 		'Titre' => 'titre',
+ 		'Body' => 'body',
+ 		'Date' => 'date',
+		'Image' => 'image',
+		'Nom' => 'nom',
+		'Prenom' => 'prenom',
+		'Email' => 'email',
+		'Numero' => 'numero',
+		'Adresse' => 'adresse',
+),
+	8 => array( 
+ 		'ID' => 'identifiant',
+ 		'Titre' => 'titre',
+ 		'Body' => 'body',
+ 		'Date' => 'date',
+		'Image' => 'image',
+		'Nom' => 'nom',
+		'Prenom' => 'prenom',
+		'Email' => 'email',
+		'Numero' => 'numero',
+		'Adresse' => 'adresse',
+),		
+	9 => array( 
+ 		'ID' => 'identifiant',
+ 		'Titre' => 'titre',
+ 		'Body' => 'body',
+ 		'Date' => 'date',
+		'Image' => 'image',
+		'Nom' => 'nom',
+		'Prenom' => 'prenom',
+		'Email' => 'email',
+		'Numero' => 'numero',
+		'Adresse' => 'adresse',		
 
-get_header(); ?>
+),
+	10 => array( 
+ 		'ID' => 'identifiant',
+ 		'Titre' => 'titre',
+ 		'Body' => 'body',
+ 		'Date' => 'date',
+		'Image' => 'image',
+		'Nom' => 'nom',
+		'Prenom' => 'prenom',
+		'Email' => 'email',
+		'Numero' => 'numero',
+		'Adresse' => 'adresse',	
+),	
+);
 
-<?php if($image_thumbnail!=''){ ?>
-	<!-- HEADER -->
-	<section id="project_parallax-timeline" class="header">
-		<div class="well" style="background-image: url('<?php echo esc_url( $image_thumbnail ); ?>')" >
-			<div id="overlay3">
-				<div class="container">
-					<div class="col-md-12">
-						<h1 class="white heavy"><?php the_title(); ?></h1> 
-						<h1 class="lead white"><?php echo htmlspecialchars_decode( $page_sub_title ); ?></h1>	
-					</div>
-				</div>	
-			</div>
-		</div>
-	</section>
-	<!-- //HEADER --> 
-  <?php }else{ ?>
-    <div class="header_colour header">
-      <div class="container">
-        <div class="col-md-12">
-          <h1 class="white heavy"><?php the_title(); ?></h1>
-          <h1 class="lead white x-light"><?php echo htmlspecialchars_decode( $page_sub_title ); ?></h1>  
-          <div class="pad45"></div>
-        </div>
-      </div>
-    </div>    
-  <?php } ?>
-  
-  
-<div class="container pad45">
-	<div class="col-md-12">
-		<!-- timeline -->
-		<ul class="timeline">			
-			<?php
-            $counter = 0;
-            $ref_month = '';
-            $monthly = new WP_Query(array(
-                'posts_per_page' => -1
-            ));
-            if( $monthly->have_posts() ) : while( $monthly->have_posts() ) : $monthly->the_post();		
-			$format = get_post_format();			
-			$id = get_the_ID();			
-		?>
-		<?php 
-            if( get_the_date('mY') != $ref_month ) {
-                if( $ref_month );
-        ?>
-		<!-- year -->
-		<li class="year"><?php echo get_the_date('Y'); ?></li>
-		<?php
-            $ref_month = get_the_date('mY');
-            $counter = 0;
-            }
-		?> 			
-		<li class="event">	
-			
-			<!-- Image -->	
-			<?php if($format=='image'){ ?>					
-				<span class="month"><?php the_time('F jS');?></span>
-				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				<?php if ( has_post_thumbnail() ) { ?>
-					<?php $params = array( 'width' => 960, 'height' => 350 );
-					$image = bfi_thumb( wp_get_attachment_url(get_post_thumbnail_id()), $params ); ?>
-					<img alt="<?php the_title(); ?>" src="<?php echo esc_url( $image ); ?>" alt="">
-				<?php } ?>
-				<p class="pad15">
-					<?php echo art23_blog_excerpt('23'); ?>
-				</p>
-			<!-- Audio -->
-			<?php }elseif($format == 'audio'){ ?>
-				<span class="month"><?php the_time('F jS');?></span>
-				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				<?php $link_audio = get_post_meta(get_the_ID(),'_cmb_link_audio', true);?>
-				<?php if($link_audio !=''){?>
-					<iframe width="100%" height="186" src="<?php echo get_post_meta(get_the_ID(),'_cmb_link_audio', true);?>"></iframe>
-				<?php }?>					
-				<p class="pad15">
-					<?php echo art23_blog_excerpt('23'); ?>
-				</p>
-			<!-- Video -->
-			<?php }elseif($format=='video'){ ?>
-				<span class="month"><?php the_time('F jS');?></span>
-				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				<?php $link_video = get_post_meta(get_the_ID(),'_cmb_link_video', true);?>
-				<?php if($link_video !=''){?>
-				<div class="vendor">
-					<iframe src="<?php echo get_post_meta(get_the_ID(),'_cmb_link_video', true);?>"></iframe>
-				</div>
-				<p>
-					<?php echo art23_blog_excerpt('23'); ?>
-				</p>
-				<?php }?>
-			 <?php }elseif($format == 'quote' ){ ?>				
-				<h4><?php echo the_content(); ?></h4>				
-			<?php }elseif($format == 'link'){ ?>	
-				<h2><?php echo the_content(); ?></h2>					
-			<?php }else{ ?>
-				<span class="month"><?php the_time('F jS');?></span>
-				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-				<?php if ( has_post_thumbnail() ) { ?>
-					<img alt="<?php the_title(); ?>" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id());?>"/>
-				<?php }?>
-				<p class="pad15">
-					<?php echo art23_blog_excerpt('23'); ?>
-				</p>
-			<?php } ?>							
-        </li>
-	<?php endwhile; endif; ?>
-	<?php wp_reset_query(); ?>
-			</ul>
-		</div>
-	</div>
-				
-<?php
-get_footer();
+
+
+
+?>
