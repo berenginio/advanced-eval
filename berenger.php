@@ -17,7 +17,7 @@ $container = array(
 	3 => array( 
  		'ID' => '000003',
  		'poid_max' => 5,
- 		'poid_reel' => 2.9,
+ 		'poid_reel' => 7,
  		'contenu' => 'verre',
 ),
 	4 => array( 
